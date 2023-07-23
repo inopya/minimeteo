@@ -1,9 +1,21 @@
 # minimeteo
-Mini estacion meteorologica con esp8266 y cliente telegram
+
+Mini estacion meteorologica con esp8266 y cliente telegram.
+
+¿Es minimeteo una estacion ***radicalmente diferente*** a las decenas de estaciones meteorológicas que puedes encontrar en la red?
+***Tajantemente NO.***
+
+Pero sí es un buen ejercicio para aprender nociones básicas y no tan básicas de programacion en el ecosistema Arduino, con un amplio abanico de funciones simples pero utiles y codigo claro, ordenado y comentado.
+Puedes usar a minimeteo para lo que se diseñó: ser una pequeña estacion meteorologica doméstica, o si te estás iniciando en el uso de placas de desarrollo  ESPxx, puedes usar este montaje para profuncdizar en el uso de **deepsleep para ahorrar bateria,** trabajar con **eeprom** para guardar datos y configuraciones de tus montajes ante eventuales cortes de suministro sin la necesidad de usar memorias externas ni tarjetas SD. Trabajar con zonas horarias y manejar los **cambios horarios invierno y verano** que se realizan en paises como españa. Adentrarte en el excitante y util mundo de los **bots de telegram** para tus montajes de IoT, o como dar un plus a tus firmwares utilizando la sencillez y la potencia de las actualizaciones mediante **OTA.**
+
+Espero que te sea útil y que disfrutes de su uso como yo lo he hecho durante su creacion.
+
+Gracias a **@egosh** por jugar con minimeteo desde sus version inicial y convertirla en [pymeteo](https://github.com/egosh/PyMeteo)
 
 
 
-=====  NOTAS DE LA VERSION  ===== 
+
+## NOTAS DE LA VERSION  
 
 Versión 0.1       Fecha: 14/05/2021
 - control basico de sensoses
@@ -35,7 +47,7 @@ Revisitando el proyecto...
 - configurar el tiempo de los envios periodicos mediante mensaje telegram
 - configurar mediante mensajes telegram los niveles de bateria baja para sleep mode
 - configurar mediante mensaje telegram los periodos sleep
-...
+- ...
 	  
 
 
