@@ -14,12 +14,13 @@ Gracias a **@egosh** por jugar con minimeteo desde sus version inicial y convert
 
 
 Recuerda que deberas añadir las credenciaes de tu bot de telegram en el fichero ***config.h*** para poder utilizar a minimeteo.
-No necesitas añadir al codigo los datos de tu red wifi. Cuando el sistema inicie por  primera vez a no poder conectar a ningun red montará un punto de acceso con un portal de configuracion. Si tu navegador no entra directaemtne en dicho portal, su direccion IP es 195.168.5.1
-Los datos por defecto de dicha red son SSID: "INOPYA_IoT-minimeteo" y la contraseña: "minimeteo", pero puedes modificarlos desde diche fichero ***config.h*** .
+No necesitas añadir al codigo los datos de tu red wifi. Cuando el sistema inicie por  primera vez, al no poder conectar a ninguna red, montará un punto de acceso con un portal de configuracion. Si tu navegador no entra directaemtne en dicho portal, su direccion **IP es 195.168.5.1**
 
-Si por algun motivo no deseas implementar el medidor de nivel de bateria mediante el divisor de tension conectado a A0 (por ejemplo porque desees utilizar dicha entrada analogica para algun tipo de sensor u otro proposito) puedes disponer de un control de nivel de  bateria (algo menos preciso, pero igualmente util) mediante la funcion **ESP.getVcc()**.
-Para ello no debes modificar nada en el código. Simplemente indicarlo en el mencionado fichero de configuracion.
-Recuerda que en el tienes todos los parametros necesarios para el control de tiempos entre lecturas de los sensores, la duracion de los periodos de deepsleep, la frecuencoa de acceso al servidor de telegram, niveles de bateria usados como umbrales para "dormir y despertar" a minimeteo, etc... 
+Los datos por defecto de dicha red son SSID: "INOPYA_IoT-minimeteo" y la contraseña: "minimeteo", pero puedes modificarlos desde dicho fichero ***config.h*** .
+
+Si por algun motivo no deseas implementar el medidor de nivel de bateria mediante el divisor de tension conectado a A0 (por ejemplo porque desees utilizar dicha entrada analogica para algun sensor u otro proposito) puedes seguir disponiendo de un control de nivel de  bateria (algo menos preciso, pero igualmente util) mediante la funcion **ESP.getVcc()**.
+Para ello no debes modificar nada en el código. Simplemente indicarlo en el mencionado fichero de configuración.
+Recuerda que en él tienes todos los parametros necesarios para el control de tu montaje: tiempos entre lecturas de los sensores, la duracion de los periodos de deepsleep, la frecuencoa de acceso al servidor de telegram, niveles de bateria usados como umbrales para "dormir y despertar" a minimeteo, etc... 
 Por supuesto sientete libre de modificar, mejorar o añadir cualquier funcion que consideres necesaria.
 
 
