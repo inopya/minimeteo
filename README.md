@@ -5,21 +5,22 @@ Mini estacion meteorologica con esp8266 y cliente telegram.
 ¿Es minimeteo una estacion ***radicalmente diferente*** a las decenas de estaciones meteorológicas que puedes encontrar en la red?
 ***Tajantemente NO.***
 
-Pero ***sí es un buen ejercicio*** para aprender nociones básicas y no tan básicas de programacion en el ecosistema Arduino, con un amplio abanico de funciones simples pero utiles y codigo claro, ordenado y comentado.
-Puedes usar a minimeteo para lo que se diseñó: ser una pequeña estacion meteorologica doméstica, o si te estás iniciando en el uso de placas de desarrollo  ESPxx, puedes usar este montaje para profuncdizar en el uso de **deepsleep para ahorrar bateria,** trabajar con **eeprom** para guardar datos y configuraciones de tus montajes ante eventuales cortes de suministro sin la necesidad de usar memorias externas ni tarjetas SD. Trabajar con zonas horarias y manejar los **cambios horarios invierno y verano** que se realizan en paises como españa. Adentrarte en el excitante y util mundo de los **bots de telegram** para tus montajes de IoT. Utilizar la libreria Wifimanager para establecer un **portal de configuracion** desde el que poder seleccionar la red wifi a la que conectas sin necesidad de modificar el firmware, o como dar un plus a tu montajes utilizando la sencillez y la potencia de las actualizaciones mediante **OTA.**
+Pero ***sí es un buen ejercicio*** para aprender nociones básicas y no tan básicas de programacion en C/C++ y en el ecosistema Arduino, con un amplio abanico de funciones simples pero utiles y codigo claro, ordenado y comentado.
+Puedes usar a minimeteo para lo que se diseñó: ser una pequeña estacion meteorologica doméstica, o si te estás iniciando en el uso de placas de desarrollo  ESPxx, puedes usar este montaje para profundizar en el uso de **deepsleep para ahorrar bateria,** trabajar con **eeprom interna** para guardar datos y configuraciones de tus montajes ante eventuales cortes de suministro sin la necesidad de usar memorias externas ni tarjetas SD. Trabajar con zonas horarias y manejar los **cambios horarios invierno y verano** que se realizan en paises como españa. Adentrarte en el excitante y útil mundo de los **bots de telegram** para tus montajes de IoT y automatizacion de tus aparatos domoticos. Utilizar la libreria Wifimanager para establecer un **portal de configuracion** desde el que poder seleccionar la red wifi a la que conectas y cambiarla sin necesidad de modificar el firmware, o como dar un plus a tu montajes utilizando la sencillez y la potencia de las actualizaciones mediante **OTA.**
 
-Espero que te sea útil y que disfrutes de su uso como yo lo he hecho durante su creacion.
+Espero que te sea útil y que disfrutes de su uso como yo lo he hecho durante su creación.
 
-Gracias a **@egosh** por jugar con minimeteo desde sus version inicial y convertirla en [pymeteo](https://github.com/egosh/PyMeteo)
+Gracias a **@egosh** por jugar con minimeteo desde su humilde versión inicial y convertirla en [pymeteo](https://github.com/egosh/PyMeteo)
 
 
 Recuerda que deberas añadir las credenciaes de tu bot de telegram en el fichero ***config.h*** para poder utilizar a minimeteo.
-No necesitas añadir al codigo los datos de tu red wifi. Cuando el sistema inicie por  primera vez, al no poder conectar a ninguna red, montará un punto de acceso con un portal de configuracion. Si tu navegador no entra directaemtne en dicho portal, su direccion **IP es 195.168.5.1**
+No necesitas añadir al código los datos de tu red wifi. Cuando el sistema inicie por primera vez, al no poder conectar a ninguna red, montará un punto de acceso con un portal de configuracion. Si tu navegador no entra directamente en dicho portal, su direccion **IP es 192.168.5.1**
 
 Los datos por defecto de dicha red son SSID: "INOPYA_IoT-minimeteo" y la contraseña: "minimeteo", pero puedes modificarlos desde dicho fichero ***config.h*** .
 
 Si por algun motivo no deseas implementar el medidor de nivel de bateria mediante el divisor de tension conectado a A0 (por ejemplo porque desees utilizar dicha entrada analogica para algun sensor u otro proposito) puedes seguir disponiendo de un control de nivel de  bateria (algo menos preciso, pero igualmente util) mediante la funcion **ESP.getVcc()**.
 Para ello no debes modificar nada en el código. Simplemente indicarlo en el mencionado fichero de configuración.
+Algunas funciones como la selección del tipo de medidor de bateria o el uso del **puerto serie para debug,** estan sujetas a **directivas del preprocesador,** de manera que se selecionan (o descartan) al compilar el codigo, de manera que solo se compilan aquellas funcionalidades que se van a utilizar evitando codigo 'inutil'.
 
 Para la correcta medicion del nivel de la bateria dispones de dos parametros (segun el modo de medicion que uses) que son ***FACTOR_AJUSTE_ADC_INT y FACTOR_AJUSTE_A0.*** 
 Deberas hacer algunas pruebas y de forma empirica determinar el factor de correccion para que las medidas de nivel de bateria se aproximen lo mas posible al valor real.
