@@ -63,7 +63,7 @@ Mini estacion meteorologica con esp8266 y cliente telegram
 
 
 ## Escudo sobre placa perforada
-Para esta version se ha obtado por un montaje "algo mas definitivo" y se ha reado un escudo sobre placa perforada.
+Para esta versión se ha obtado por un montaje "un poco mas definitivo" y se ha creado un escudo sobre placa perforada.
 
 ![](./imagenes/hard-minimteo-escudo-up.jpg)
 
@@ -72,7 +72,7 @@ Para esta version se ha obtado por un montaje "algo mas definitivo" y se ha read
 
 ## Imagenes de la interfaz telegram
 
-Algunas imagenes del aspecto de los menus de interacción desde el bot de telegram
+Algunas imagenes del aspecto de los menús de interacción desde el bot de telegram
 
 Menu accesible por los usuarios públicos. 
 Contiene solo un reducido conjunto de comandos:
