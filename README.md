@@ -44,10 +44,10 @@ Mini estacion meteorologica con esp8266 y cliente telegram
 - 1x celula solar 5v/6v y 1W o mas. (de su potencia dependerá la rapidez de carga de nuestra bateria de reserva)
 - 1x diodo 1N5819 (o similar), para evitar el consumo por parte de la celula solar en las horas de oscuridad
 - 2x resistencias 100 MΩ
-- 1x bateria lipo 3.7v (telefono movil, 18650,...)
+- 1x bateria lipo 3.7v (teléfono móvil, 18650,...)
 - 1x Modulo de carga para baterias Lipo tipo TP4056 (o similar)
-- 1x Sensor barometrico BMP/E280 (o similar)
-- 1x Sesor humedad HTU21D /HTU31D (o similar)
+- 1x Sensor barométrico BMP/E280 (o similar)
+- 1x Sensor humedad HTU21D /HTU31D (o similar)
 - 1x protoboard o placa perforada
 - cables 
 - pines, soldador, estaño (en esta version optamos por montaje en placa perforada) 
@@ -56,6 +56,8 @@ Mini estacion meteorologica con esp8266 y cliente telegram
 ## Esquema de montaje
 
 ![](./imagenes/sche-wemos-miniMETEO.png)
+
+##  Imagen del montaje real
 
 ![](./imagenes/hard-minimeteo-componentes.jpg)
 
@@ -70,18 +72,18 @@ Para esta version se ha obtado por un montaje "algo mas definitivo" y se ha read
 
 ## Imagenes de la interfaz telegram
 
-Algunas imagenes del aspecto de los menus de interaccion desde el bot de telegram
+Algunas imagenes del aspecto de los menus de interacción desde el bot de telegram
 
-Menu accesible por los usuarios publicos. 
+Menu accesible por los usuarios públicos. 
 Contiene solo un reducido conjunto de comandos:
 
 ![](./imagenes/soft-menu-usuario.png)
 
-Muestra de respuestas a peticion de un comadno prohibido apra usuarios y peticion del registro histórico de temperatura mínimas y máximas:
+Muestra de respuestas de minimeteo ante la petición de un comando prohibido para usuarios y la petición del registro histórico de temperaturas mínimas y máximas (comando público)
 
 ![](./imagenes/sof-registro-historico.png)
 
-Menu de comandos del administrador. Set de comandos basicos y set decomandos Extra
+Menú de comandos del administrador. Set de comandos Básicos + set de comandos Extra
 
 ![](./imagenes/sof-menu-admin.png)
 
