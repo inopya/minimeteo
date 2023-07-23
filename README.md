@@ -6,12 +6,21 @@ Mini estacion meteorologica con esp8266 y cliente telegram.
 ***Tajantemente NO.***
 
 Pero sí es un buen ejercicio para aprender nociones básicas y no tan básicas de programacion en el ecosistema Arduino, con un amplio abanico de funciones simples pero utiles y codigo claro, ordenado y comentado.
-Puedes usar a minimeteo para lo que se diseñó: ser una pequeña estacion meteorologica doméstica, o si te estás iniciando en el uso de placas de desarrollo  ESPxx, puedes usar este montaje para profuncdizar en el uso de **deepsleep para ahorrar bateria,** trabajar con **eeprom** para guardar datos y configuraciones de tus montajes ante eventuales cortes de suministro sin la necesidad de usar memorias externas ni tarjetas SD. Trabajar con zonas horarias y manejar los **cambios horarios invierno y verano** que se realizan en paises como españa. Adentrarte en el excitante y util mundo de los **bots de telegram** para tus montajes de IoT, o como dar un plus a tus firmwares utilizando la sencillez y la potencia de las actualizaciones mediante **OTA.**
+Puedes usar a minimeteo para lo que se diseñó: ser una pequeña estacion meteorologica doméstica, o si te estás iniciando en el uso de placas de desarrollo  ESPxx, puedes usar este montaje para profuncdizar en el uso de **deepsleep para ahorrar bateria,** trabajar con **eeprom** para guardar datos y configuraciones de tus montajes ante eventuales cortes de suministro sin la necesidad de usar memorias externas ni tarjetas SD. Trabajar con zonas horarias y manejar los **cambios horarios invierno y verano** que se realizan en paises como españa. Adentrarte en el excitante y util mundo de los **bots de telegram** para tus montajes de IoT. Utilizar la libreria Wifimanager para establecer un **portal de configuracion** desde el que poder seleccionar la red wifi a la que conectas sin necesidad de modificar el firmware, o como dar un plus a tu montajes utilizando la sencillez y la potencia de las actualizaciones mediante **OTA.**
 
 Espero que te sea útil y que disfrutes de su uso como yo lo he hecho durante su creacion.
 
 Gracias a **@egosh** por jugar con minimeteo desde sus version inicial y convertirla en [pymeteo](https://github.com/egosh/PyMeteo)
 
+
+Recuerda que deberas añadir las credenciaes de tu bot de telegram en el fichero ***config.h*** para poder utilizar a minimeteo.
+No necesitas añadir al codigo los datos de tu red wifi. Cuando el sistema inicie por  primera vez a no poder conectar a ningun red montará un punto de acceso con un portal de configuracion. Si tu navegador no entra directaemtne en dicho portal, su direccion IP es 195.168.5.1
+Los datos por defecto de dicha red son SSID: "INOPYA_IoT-minimeteo" y la contraseña: "minimeteo", pero puedes modificarlos desde diche fichero ***config.h*** .
+
+Si por algun motivo no deseas implementar el medidor de nivel de bateria mediante el divisor de tension conectado a A0 (por ejemplo porque desees utilizar dicha entrada analogica para algun tipo de sensor u otro proposito) puedes disponer de un control de nivel de  bateria (algo menos preciso, pero igualmente util) mediante la funcion **ESP.getVcc()**.
+Para ello no debes modificar nada en el código. Simplemente indicarlo en el mencionado fichero de configuracion.
+Recuerda que en el tienes todos los parametros necesarios para el control de tiempos entre lecturas de los sensores, la duracion de los periodos de deepsleep, la frecuencoa de acceso al servidor de telegram, niveles de bateria usados como umbrales para "dormir y despertar" a minimeteo, etc... 
+Por supuesto sientete libre de modificar, mejorar o añadir cualquier funcion que consideres necesaria.
 
 
 
