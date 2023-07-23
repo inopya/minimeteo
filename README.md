@@ -81,7 +81,7 @@ Muestra de respuestas a peticion de un comadno prohibido apra usuarios y peticio
 
 ![](./imagenes/sof-registro-historico.png)
 
-Menu de comandos del administrador. Set de comandos basicos y comandos Extra
+Menu de comandos del administrador. Set de comandos basicos y set decomandos Extra
 
 ![](./imagenes/sof-menu-admin.png)
 
