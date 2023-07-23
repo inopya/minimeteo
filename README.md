@@ -20,7 +20,11 @@ Los datos por defecto de dicha red son SSID: "INOPYA_IoT-minimeteo" y la contras
 
 Si por algun motivo no deseas implementar el medidor de nivel de bateria mediante el divisor de tension conectado a A0 (por ejemplo porque desees utilizar dicha entrada analogica para algun sensor u otro proposito) puedes seguir disponiendo de un control de nivel de  bateria (algo menos preciso, pero igualmente util) mediante la funcion **ESP.getVcc()**.
 Para ello no debes modificar nada en el código. Simplemente indicarlo en el mencionado fichero de configuración.
-Recuerda que en él tienes todos los parametros necesarios para el control de tu montaje: tiempos entre lecturas de los sensores, la duracion de los periodos de deepsleep, la frecuencoa de acceso al servidor de telegram, niveles de bateria usados como umbrales para "dormir y despertar" a minimeteo, etc... 
+
+Para la correcta medicion del nivel de la bateria dispones de dos parametros (segun el modo de medicion que uses) que son ***FACTOR_AJUSTE_ADC_INT y FACTOR_AJUSTE_A0.*** 
+Deberas hacer algunas pruebas y de forma empirica determinar el factor de correccion para que las medidas de nivel de bateria se aproximen lo mas posible al valor real.
+
+Recuerda que en el fichero de configuración tienes todos los parametros necesarios para el control de tu montaje: tiempos entre lecturas de los sensores, la duracion de los periodos de deepsleep, la frecuencoa de acceso al servidor de telegram, niveles de bateria usados como umbrales para "dormir y despertar" a minimeteo, etc... 
 Por supuesto sientete libre de modificar, mejorar o añadir cualquier funcion que consideres necesaria.
 
 
