@@ -5,7 +5,7 @@ Mini estacion meteorologica con esp8266 y cliente telegram.
 ¿Es minimeteo una estacion ***radicalmente diferente*** a las decenas de estaciones meteorológicas que puedes encontrar en la red?
 ***Tajantemente NO.***
 
-Pero sí es un buen ejercicio para aprender nociones básicas y no tan básicas de programacion en el ecosistema Arduino, con un amplio abanico de funciones simples pero utiles y codigo claro, ordenado y comentado.
+Pero ***sí es un buen ejercicio*** para aprender nociones básicas y no tan básicas de programacion en el ecosistema Arduino, con un amplio abanico de funciones simples pero utiles y codigo claro, ordenado y comentado.
 Puedes usar a minimeteo para lo que se diseñó: ser una pequeña estacion meteorologica doméstica, o si te estás iniciando en el uso de placas de desarrollo  ESPxx, puedes usar este montaje para profuncdizar en el uso de **deepsleep para ahorrar bateria,** trabajar con **eeprom** para guardar datos y configuraciones de tus montajes ante eventuales cortes de suministro sin la necesidad de usar memorias externas ni tarjetas SD. Trabajar con zonas horarias y manejar los **cambios horarios invierno y verano** que se realizan en paises como españa. Adentrarte en el excitante y util mundo de los **bots de telegram** para tus montajes de IoT. Utilizar la libreria Wifimanager para establecer un **portal de configuracion** desde el que poder seleccionar la red wifi a la que conectas sin necesidad de modificar el firmware, o como dar un plus a tu montajes utilizando la sencillez y la potencia de las actualizaciones mediante **OTA.**
 
 Espero que te sea útil y que disfrutes de su uso como yo lo he hecho durante su creacion.
