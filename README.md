@@ -17,16 +17,20 @@ Recuerda que deberas añadir las credenciaes de tu bot de telegram en el fichero
 No necesitas añadir al código los datos de tu red wifi. Cuando el sistema inicie por primera vez, al no poder conectar a ninguna red, montará un punto de acceso con un portal de configuracion. Si tu navegador no entra directamente en dicho portal, su direccion **IP es 192.168.5.1**
 
 Los datos por defecto de dicha red son SSID: "INOPYA_IoT-minimeteo" y la contraseña: "minimeteo", pero puedes modificarlos desde dicho fichero ***config.h*** .
+* Un pequeño detalle, el sitema tratará de conectar a la última red conocida durante 15 segundos, si no conecta, monta el portal de configuración. Pero si no se conecta ningún usuario a dicho porta, tras otros 60 segundos, se reinicia y vuelve a intentar conectar a la ultima red conocida... y asi en un bucle hasta que o bien consiga conectar auna rd o se le configure una nueva. Puedes cambiar dichos "timeouts" desde el enumerador _enum intervalos_tiempo_ del fichero **enumeradores.h**
+O bien deshabilitar por completo ese timeout del portal de configuracion comentando la linea correspondiente del fichero .ino:
+**wifiManager.setConfigPortalTimeout(TIMEOUT_AP_PORTAL);**
+Se ha decidido por este modo de configuracion por produce una perdida de red que sea recuperable: se reinicia el routero, hay una mala conexion a internet... si sucede algo asi y el espxx trata de conectar, al no poder hacerlo entra en modo portal de configuracion. Si no existe ese timeout, quedaría ahí permamentemente hasta un reinicio manual independientemente de que el servicio de red se restableciese.
 
-Si por algun motivo no deseas implementar el medidor de nivel de bateria mediante el divisor de tension conectado a A0 (por ejemplo porque desees utilizar dicha entrada analogica para algun sensor u otro proposito) puedes seguir disponiendo de un control de nivel de  bateria (algo menos preciso, pero igualmente util) mediante la funcion **ESP.getVcc()**.
+Si por algun motivo no deseas implementar el medidor de nivel de batería mediante el divisor de tension conectado a A0 (por ejemplo porque desees utilizar dicha entrada analógica para algún sensor u otro propósito) puedes seguir disponiendo de un control de nivel de  bateria (algo menos preciso, pero igualmente útil) mediante la funcion **ESP.getVcc()**.
 Para ello no debes modificar nada en el código. Simplemente indicarlo en el mencionado fichero de configuración.
-Algunas funciones como la selección del tipo de medidor de bateria o el uso del **puerto serie para debug,** estan sujetas a **directivas del preprocesador,** de manera que se selecionan (o descartan) al compilar el codigo, de manera que solo se compilan aquellas funcionalidades que se van a utilizar evitando codigo 'inutil'.
+Algunas funciones como la selección del tipo de medidor de bateria o el uso del **puerto serie para debug,** estan sujetas a **directivas del preprocesador,** es decir que se selecionan (o descartan) al compilar el código, de manera que solo se compilan aquellas funcionalidades que se van a utilizar evitando codigo 'inutil'.
 
-Para la correcta medicion del nivel de la bateria dispones de dos parametros (segun el modo de medicion que uses) que son ***FACTOR_AJUSTE_ADC_INT y FACTOR_AJUSTE_A0.*** 
-Deberas hacer algunas pruebas y de forma empirica determinar el factor de correccion para que las medidas de nivel de bateria se aproximen lo mas posible al valor real.
+Para la correcta medicion del nivel de la batería dispones de dos parametros (segun el modo de medición que uses) que son: ***FACTOR_AJUSTE_ADC_INT y FACTOR_AJUSTE_A0.*** 
+Deberás hacer algunas pruebas y de forma empirica determinar el factor de corrección para que las medidas de nivel de batería se aproximen lo mas posible al valor real en tu montaje.
 
-Recuerda que en el fichero de configuración tienes todos los parametros necesarios para el control de tu montaje: tiempos entre lecturas de los sensores, la duracion de los periodos de deepsleep, la frecuencoa de acceso al servidor de telegram, niveles de bateria usados como umbrales para "dormir y despertar" a minimeteo, etc... 
-Por supuesto sientete libre de modificar, mejorar o añadir cualquier funcion que consideres necesaria.
+Recuerda que en el fichero de configuración tienes todos los parametros necesarios para el control de tu montaje: tiempos entre lecturas de los sensores, la duración de los periodos de deepsleep, la frecuencia de acceso al servidor de telegram, niveles de bateria usados como umbrales para "dormir y despertar" a minimeteo, etc... 
+Por supuesto siéntete libre de modificar, mejorar o añadir cualquier función que consideres necesaria.
 
 
 
