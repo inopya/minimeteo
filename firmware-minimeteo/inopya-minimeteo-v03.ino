@@ -911,7 +911,7 @@ void procesarTelegramas(int num_mensajes)
 			
 			else if ( text.equals("/extra_info") && FLAG_debug_comands ) { 
 				if(FLAG_bmx_enable || FLAG_htu_enable) { enviar_informacion_debug_admin( chat_id ); }
-				else{ bot.sendMessage( chat_id, "fallan todos los sensores,\n\Revise a MiniMeteo" ); }			  
+				else{ bot.sendMessage( chat_id, "fallan todos los sensores,\nRevise a MiniMeteo" ); }			  
 			}			
 			//'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''	
 			
