@@ -50,4 +50,3 @@ volatile bool FLAG_update_eeprom_data = false;  	// TRUE: permiso para grabar da
 bool FLAG_debug_comands = false;    //TRUE: indica que estan activos los comandos extra
 bool FLAG_ahorro_bateria = false;	// TRUE: de desconecta la wifi durante en ciertos periodos //sin implementar aun
 		
-//if( FLAG_ahorro_bateria ){ WiFi.mode(WIFI_OFF); }  //esto no es de aqui, solo para tenerlo a mano 
