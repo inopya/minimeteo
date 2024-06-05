@@ -2,7 +2,7 @@
 
 Mini estacion meteorologica con esp8266 y cliente telegram.
 
-¿Es minimeteo una estacion ***radicalmente diferente*** a las decenas de estaciones meteorológicas que puedes encontrar en la red?
+¿Es minimeteo una estacion ***radicalmente diferente*** a las decenas de estaciones meteorológicas que puedes encontrar en la red ?
 ***Tajantemente NO.***
 
 Pero ***sí es un buen ejercicio*** para aprender nociones básicas y no tan básicas de programacion en C/C++ y en el ecosistema Arduino, con un amplio abanico de funciones simples pero utiles y codigo claro, ordenado y comentado.
